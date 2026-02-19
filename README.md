@@ -10,6 +10,7 @@ It consumes a simple trace file (alloc/free/read/write events) and reports:
 - use-after-free (poison violations)
 - out-of-bounds reads/writes
 - invalid accesses on unknown pointers
+- malformed trace/input errors
 
 ## Why this project exists
 
@@ -28,6 +29,7 @@ cmake --build build
 ```bash
 ./build/xenon analyze examples/clean.trace
 ./build/xenon analyze examples/with_issues.trace
+./build/xenon analyze --format json examples/with_issues.trace
 ```
 
 ## Trace format
@@ -52,7 +54,7 @@ free  0x1000
 ## Exit codes
 
 - `0`: no findings
-- `2`: one or more findings detected
+- `2`: one or more findings detected (memory issues, leaks, or malformed/unknown input operations)
 - `1`: usage/input/runtime error
 
 ## Tests

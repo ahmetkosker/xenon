@@ -1,0 +1,4 @@
+# overflow-safe out-of-bounds check
+alloc 0xbeef 16
+write 0xbeef 18446744073709551610 8
+free 0xbeef

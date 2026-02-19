@@ -1,0 +1,6 @@
+# long pointer tokens that share the same prefix
+alloc 0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa1111 8
+alloc 0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa2222 8
+free 0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa1111
+write 0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa2222 0 8
+free 0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa2222

@@ -1,0 +1,6 @@
+# malformed and unknown operations
+alloc 0x1 not_a_number
+write 0x1 0
+zap 0x1 0 1
+alloc 0x2 4
+read 0x2 xx 1
